@@ -41,11 +41,17 @@ $ python manage.py sqlmigrate polls 0001
 
 After that we'll use these SQL statements to Database  
 ```
-$ python3 manage.py migrate
+$ python manage.py migrate
 ```
 
 Create an admin user
 -----
 ```
 $ python manage.py createsuperuser
+```
+
+Run TestCase
+-----
+```
+$ python manage.py test [app name]
 ```
