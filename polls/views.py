@@ -15,8 +15,8 @@ def detail(req, question_id):
     return render(req, 'polls/detail.html', {'question': question})
 
 def results(req, question_id):
-    res = 'You\'re looking at the results of question %s.'
-    return HttpResponse(res % question_id)
+    question = get_object_or_404(Question, pk=question_id)
+    return render(req, 'polls/results.html', {'question': question})
 
 def vote(req, question_id):
     question = get_object_or_404(Question, pk=question_id)
